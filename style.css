@@ -1,0 +1,134 @@
+:root {
+    --azul-palido: #F5F7FF;
+    --azul-brillante: #3829E0;
+    --azul-desaturado: #7280A7;
+    --azul-extra-palido: #F5F7FF;
+    --azul-oscuro: #1F2F56;
+    --azul-hover: #766CF1;
+    --azul-background: #E0E8FF;
+    --blanco: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Red Hat Display', sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--azul-background);
+    background-image: url('./img/pattern-background-mobile.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card {
+    width: 90%;
+    min-width: 275px;
+    max-width: 350px;
+    background-color: var(--blanco);
+    border-radius: 20px;
+}
+.card__hero-img {
+    width: 100%;
+    height: 170px;
+    background-image: url('./img/illustration-hero.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+}
+.card__cuerpo {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+}
+.card__texto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card__texto--titulo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+.card__texto--resumen {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: var(--azul-desaturado);
+}
+.card__annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--azul-palido);
+    padding: 15px;
+    border-radius: 15px;
+}
+.card__annual-plan--titulo {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 900;
+    color: var(--azul-oscuro);
+}
+.card__annual-plan--precio {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: var(--azul-desaturado);
+}
+.card__annual-plan--btn-change {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--azul-brillante);
+    cursor: pointer;
+}
+.card__annual-plan--btn-change:hover {
+    color: var(--azul-hover);
+}
+.card__btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+}
+.card__btn.card__btn--preceed-payment {
+    color: var(--blanco);
+    background-color: var(--azul-brillante);
+    box-shadow: 0px 12px 25px -6px rgba(98,104,230,0.55);
+    margin-top: 20px;
+}
+.card__btn.card__btn--preceed-payment:hover {
+    background-color: var(--azul-hover);
+}
+.card__btn.card__btn--cancel-order {
+    color: var(--azul-desaturado);
+    background-color: transparent;
+}
+.card__btn.card__btn--cancel-order:hover {
+    color: var(--azul-oscuro);
+}
+
+@media (min-width: 600px){
+    main {
+        background-image: url('./img/pattern-background-desktop.svg');
+        background-size: contain;
+    }
+}
+
